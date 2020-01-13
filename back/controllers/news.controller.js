@@ -5,7 +5,7 @@ newsCtrl.getNews = async (req, res) =>{
     res.json(news);
 }
 newsCtrl.createNews = async (req, res) =>{
-    const news = new Plato({
+    const news = new News({
         title: req.body.title,
         body: req.body.body,
         image: req.body.image,
@@ -19,16 +19,13 @@ newsCtrl.createNews = async (req, res) =>{
     });
 }
 
-newsCtrl.getNews = async (req, res) =>{
+newsCtrl.getNew = async (req, res) =>{
     console.log(req.params);
-    const news = await New.findById(req.params.id);
+    const news = await News.findById(req.params.id);
     res.json(news);
 }
-newsCtrl.editNew = async (req, res) =>{
-    //console.log(req);
+newsCtrl.editNews = async (req, res) =>{
     const {id} = req.params;
-    let filename = undefined;
-    let precioOrigin = utils.parseFloat(req.body.precio);
     console.log(id);
     let news = {
         body: req.body.body,

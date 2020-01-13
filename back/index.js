@@ -4,7 +4,7 @@ const app = express();
 const cors  = require('cors');
 const {MongoClient} = require  ("./database.js")
 const schedule = require('node-schedule');
-const routines  = require ('./routine.js/index.js');
+const routines  = require ('./routine.js');
 //Settings----
 app.set('port', process.env.PORT || 3000);
 //Middlewares 
@@ -24,7 +24,7 @@ app.use(cors({
 }));
 app.use(express.static(__dirname + '/static')); //Serves resources from static folder//Routes
 //Routes
-//app.use('/api',require('./routes/plato.routes.js'));
+app.use('/api',require('./routes/news.routes.js'));
 app.get('/api/file/:path',function(req, res){
 	console.log(req.params);
     res.sendFile(__dirname + "/static/" + req.params.path);

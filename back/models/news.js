@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
-//: title, body, image, source y publisher
+//: title, body, image, source & publisher
 const newsSchema = new Schema({
     title: {type: String, required: true},
-    body: {type: Number, required: true},
-    image: {type: Boolean, default: false},
-    source: {type: Boolean, default: false},
-    publisher: {type: String, required: true},
+    body: {type: String, required: true},
+    image: {type: String},
+    source: {type: String},
+    publisher: {type: String, required: false},
 });
 
 module.exports = mongoose.model('news', newsSchema);
