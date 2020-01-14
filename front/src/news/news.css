@@ -1,0 +1,31 @@
+.news {
+    box-shadow: 1px 2px 3px 2px gray;
+    border: 2px solid darkgray;
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+    height: auto;
+    max-width: 625px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.news__title {
+    margin: 0 0 0 0;
+}
+
+.news__source {
+    font-size: 10px;
+    color: gray;
+}
+
+.news__img {
+    margin: 5px 5px 5px 5px;
+    width: 100%;
+    height: auto;
+    max-width: 625px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
